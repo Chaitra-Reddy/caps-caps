@@ -28,6 +28,10 @@
 							<td>${p.name}</td>
 							<td>${p.description}</td>
 							<td class="font-weight-bold">&#x20B9; ${p.price}</td>
+							<td>
+								<a href="delete/${p.id }"><i class="far fa-trash-alt"></i></a>
+								<a href="update/${p.id }"><i class="fas fa-edit"></i></a>
+							</td>
 						</tr>
 						</c:forEach>
 					</tbody>
