@@ -21,45 +21,17 @@ public class ReadingExcel
 		XSSFWorkbook wb = new XSSFWorkbook(inputStream);
 		
 		XSSFSheet sheet = wb.getSheet("Sheet1");
-//		XSSFSheet sheet = wb.getSheetAt(0);  //--another method
 		
 		//USING FOR LOOP TO READ DATA
-//		int rows = sheet.getLastRowNum();
-//		int cols = sheet.getRow(1).getLastCellNum();
-//		
-//		for(int r=0; r<rows; r++)
-//		{
-//			XSSFRow row = sheet.getRow(r);
-//			for(int c=0; c<cols; c++)
-//			{
-//				XSSFCell cell = row.getCell(c);
-//				
-//				switch(cell.getCellType())
-//				{
-//				case STRING: System.out.print(cell.getStringCellValue()); break;
-//				case NUMERIC: System.out.print(cell.getNumericCellValue()); break;
-//				case BOOLEAN: System.out.print(cell.getBooleanCellValue()); break;
-//				default:
-//					break;
-//				}
-//				System.out.println(" | ");
-//			}
-//			System.out.println();
-//		}
-//		wb.close();
+		int rows = sheet.getLastRowNum();
+		int cols = sheet.getRow(1).getLastCellNum();
 		
-		//USING ITERATOR METHOD
-		Iterator itr = sheet.iterator();
-		
-		while(itr.hasNext())
+		for(int r=0; r<rows; r++)
 		{
-			XSSFRow row = (XSSFRow) itr.next();
-			
-			Iterator cellItr = row.cellIterator();
-			
-			while(cellItr.hasNext())
+			XSSFRow row = sheet.getRow(r);
+			for(int c=0; c<cols; c++)
 			{
-				XSSFCell cell = (XSSFCell) cellItr.next();
+				XSSFCell cell = row.getCell(c);
 				
 				switch(cell.getCellType())
 				{
@@ -69,10 +41,37 @@ public class ReadingExcel
 				default:
 					break;
 				}
-				System.out.print(" | ");
+				System.out.println(" | ");
 			}
 			System.out.println();
 		}
+		wb.close();
+		
+		//USING ITERATOR METHOD
+//		Iterator itr = sheet.iterator();
+//		
+//		while(itr.hasNext())
+//		{
+//			XSSFRow row = (XSSFRow) itr.next();
+//			
+//			Iterator cellItr = row.cellIterator();
+//			
+//			while(cellItr.hasNext())
+//			{
+//				XSSFCell cell = (XSSFCell) cellItr.next();
+//				
+//				switch(cell.getCellType())
+//				{
+//				case STRING: System.out.print(cell.getStringCellValue()); break;
+//				case NUMERIC: System.out.print(cell.getNumericCellValue()); break;
+//				case BOOLEAN: System.out.print(cell.getBooleanCellValue()); break;
+//				default:
+//					break;
+//				}
+//				System.out.print(" | ");
+//			}
+//			System.out.println();
+//		}
 	}
 
 }

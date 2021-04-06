@@ -30,33 +30,6 @@ public class WritingExcelDemo1
 								{105,"Pam","Admin"}
 							};	
 		
-		//USING FOR LOOP
-//		int rows = empData.length;
-//		int cols = empData[0].length;
-//		
-//		for(int r=0; r<rows; r++)
-//		{
-//			XSSFRow row = sheet.createRow(r);
-//			for(int c=0; c<cols; c++)
-//			{
-//				XSSFCell cell = row.createCell(c);
-//				Object value = empData[r][c];
-//				
-//				if(value instanceof String)
-//				{
-//					cell.setCellValue((String)value);
-//				}
-//				if(value instanceof Integer)
-//				{
-//					cell.setCellValue((Integer)value);
-//				}
-//				if(value instanceof Boolean)
-//				{
-//					cell.setCellValue((Boolean)value);
-//				}
-//			}
-//		}
-		
 		//USING FOR...EACH LOOP
 		int rowCount = 0;
 		for(Object emp[]:empData)
@@ -88,6 +61,33 @@ public class WritingExcelDemo1
 		outputStream.close();
 		
 		System.out.println("\nWritten to excel file successfully.");
+		
+		//USING FOR LOOP
+//		int rows = empData.length;
+//		int cols = empData[0].length;
+//		
+//		for(int r=0; r<rows; r++)
+//		{
+//			XSSFRow row = sheet.createRow(r);
+//			for(int c=0; c<cols; c++)
+//			{
+//				XSSFCell cell = row.createCell(c);
+//				Object value = empData[r][c];
+//				
+//				if(value instanceof String)
+//				{
+//					cell.setCellValue((String)value);
+//				}
+//				if(value instanceof Integer)
+//				{
+//					cell.setCellValue((Integer)value);
+//				}
+//				if(value instanceof Boolean)
+//				{
+//					cell.setCellValue((Boolean)value);
+//				}
+//			}
+//		}
 	}
 
 }

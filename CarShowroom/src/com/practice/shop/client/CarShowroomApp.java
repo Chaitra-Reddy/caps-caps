@@ -56,10 +56,10 @@ public class CarShowroomApp
 			switch(choice)
 			{
 			case 1:
+				Showroom showroom = new Showroom();
 				try
 				{
-					Showroom s = addShowroom();
-					displayShowroom(s);
+					showroom = addShowroom();
 				}
 				catch(InvalidIdException e)
 				{
@@ -69,6 +69,7 @@ public class CarShowroomApp
 				{
 					System.out.println("Brand invalid. Only Maruti and Hyundai allowed. Try again.");
 				}
+				displayShowroom(showroom);
 				break;
 				
 			case 2:
