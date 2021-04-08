@@ -39,7 +39,7 @@
 					</div>
 
 					<div class="container text-center">
-						<a href="${pageContent.request.contextPath }/"
+						<a href="${pageContext.request.contextPath }/"
 							class="btn btn-outline-danger">Back</a>
 
 						<button type="submit" class="btn btn-primary">Update</button>

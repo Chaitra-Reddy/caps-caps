@@ -1348,3 +1348,7 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2021-04-05 14:25:23,506 [Worker-457: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2021-04-05 14:25:23,507 [Worker-457: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-04-05 14:25:23,508 [Worker-457: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ECLIPSE\CAP_WORKSPACE\MvcDemo\src\test\resources
+2021-04-06 21:32:22,013 [Worker-638: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-06 21:32:22,045 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-04-06 21:32:22,051 [Worker-638: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-06 21:32:22,054 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\ECLIPSE\CAP_WORKSPACE\MvcDemo\src\test\resources

@@ -8,6 +8,8 @@ public class MovieBookApp
 		TotalEarnings te = new TotalEarnings();
 		te.start();
 		
+//		System.out.println("Total earning: $" + te.total);
+		
 		synchronized(te)
 		{
 			te.wait();

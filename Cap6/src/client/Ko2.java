@@ -15,16 +15,16 @@ public class Ko2 {
 		Movie m1 = new Movie("Shawshank Redemption", 1);
 		String fileName = "C:\\Files\\SerialDemo.txt";
 
-		try 
+		try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))) 
 		{
 			// Saving the movie in text file
-			FileOutputStream file = new FileOutputStream(fileName);
-			ObjectOutputStream out = new ObjectOutputStream(file);
+//			FileOutputStream file = new FileOutputStream(fileName);
+//			ObjectOutputStream out = new ObjectOutputStream(file);
 
 			out.writeObject(m1);
 
-			out.close();
-			file.close();
+//			out.close();
+//			file.close();
 
 			System.out.println("Movie has been serialized...");
 
@@ -36,16 +36,13 @@ public class Ko2 {
 
 		Movie m2 = null;
 
-		try 
+		try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))) 
 		{
 			// Reading the serialized movie from the text file
-			FileInputStream file = new FileInputStream(fileName);
-			ObjectInputStream in = new ObjectInputStream(file);
+//			FileInputStream file = new FileInputStream(fileName);
+//			ObjectInputStream in = new ObjectInputStream(file);
 
 			m2 = (Movie) in.readObject();
-
-			in.close();
-			file.close();
 
 			System.out.println("Movie has been deserialized...");
 			System.out.println("Movie name is " + m2.getName());

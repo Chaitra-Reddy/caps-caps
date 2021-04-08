@@ -4,13 +4,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.personal"/>
 		</list>
 		<list key="name">
-			<item value="Army"/>
 		</list>
 		<list key="artifactId">
-			<item value="platoon"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -52,6 +49,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\ECLIPSE\CAP_WORKSPACE\ApachePOIExcel"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -64,10 +62,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.practice.MvcDemo"/>
+			<item value="com.practice.DemoMvc"/>
 		</list>
 		<list key="groupId">
+			<item value="com.practice"/>
 		</list>
 		<list key="artifactId">
+			<item value="MvcDemo"/>
+			<item value="DemoMvc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
